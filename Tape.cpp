@@ -400,8 +400,6 @@ void tape::pList()
 
 	resetP();
 
-	cout << curr->dta;
-
 	while (curr->next != NULL)
 	{
 		curr = curr->next;
