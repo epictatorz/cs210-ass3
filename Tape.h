@@ -22,7 +22,7 @@ class tape
 	cell* tail;
 
 	int cnt;
-	bool* itrt;
+	bool itrt;
 
 	//insert
 
