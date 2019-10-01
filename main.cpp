@@ -6,10 +6,11 @@
 #include "Tape.h"
 using namespace std;
 
-const int AT_Size = 25;
-void turing(int, ActionTable, tape);
+//const int AT_Size = 25;
+//void turing(int, ActionTable, tape);
 
 int main() {
+	int PtrPos;
 	bool exit = false;
 	char choice;
 	while (exit == false) {							//simple menu system
@@ -20,6 +21,7 @@ int main() {
 		cin >> choice;
 		switch (choice) {
 		case '1': {
+			PtrPos = 0;
 			int StateRegister;
 			tape T;
 			ActionTable AT[AT_Size];
@@ -46,7 +48,7 @@ int main() {
 			while (Symbol != '-') {			//this loop initilizes the Action Table
 				int i = 0;
 				getline(problem, Line);
-				cout << Line << endl;
+				//cout << Line << endl;
 				Symbol = Line[0];			//gets the first character in the list and sees if it is '-' to end the 
 				if (Symbol == '-') {		//initilizing of the Action Table
 					break;
@@ -56,15 +58,63 @@ int main() {
 				AT[i].NextState = int(Line[4]) - 48;
 				AT[i].NewSymbol = Line[6];
 				AT[i].Direction = Line[8];
-				cout << AT[i].CurrentState << AT[i].Symbol << AT[i].NextState << AT[i].NewSymbol << AT[i].Direction << endl;
+				//cout << AT[i].CurrentState << AT[i].Symbol << AT[i].NextState << AT[i].NewSymbol << AT[i].Direction << endl;
 				i++;
 			}
 			getline(problem, Line);
-			cout << Line << endl;
-			for (int i = 0; i <= (Line[0] - '0') - 1; i++){
+			//cout << Line << endl;
+			for (int i = 0; i < (Line[0] - '0'); i++){
 				T.itR();
+				PtrPos += 1;
 			}
+			cout<< endl;
+			//T.pList(PtrPos);
 			problem.close();
+			for (int j = 0; j < 5; j++) {
+				T.pList(PtrPos);
+				cout << "Value: " << T.read()  << "  StateRegister:" << StateRegister << endl << endl;
+				switch (T.read()) {
+				case '0':
+					switch (StateRegister) {
+					case 1:
+						T.write('1');
+						//T.pList(PtrPos);
+						StateRegister = 0;
+						break;
+					}
+					break;
+				case '1':
+					switch (StateRegister) {
+					case 0:
+						T.itR();
+						PtrPos++;
+						//T.pList(PtrPos);
+						break;
+					case 1:
+						T.write('0');
+						T.itL();
+						PtrPos--;
+						//T.pList(PtrPos);
+						break;
+					}
+					break;
+				case 'B':
+					switch (StateRegister) {
+					case 0:
+						//T.pList(PtrPos);
+						T.itL();
+						PtrPos--;
+						StateRegister = 1;
+						break;
+					case 1:
+						int x = 1;
+					}
+					break;
+				}
+			}
+
+
+
 			//turing(StateRegister, AT[AT_Size], T);
 			break;
 		}
@@ -80,11 +130,11 @@ int main() {
 	}
 	return 0;
 }
-void turing(int SR, ActionTable AT, tape T) {
+//void turing(int SR, ActionTable AT, tape T) {
 	/*for (int i = 0; i <= AT_Size; i++) {
 		switch()
 	}*/
-}
+//}
 /*
 void subtract() {
 	int StateRegister;

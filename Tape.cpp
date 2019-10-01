@@ -50,10 +50,9 @@ bool tape::isPset()
 }
 
 
-int tape::getP()
+cell* tape::getP()
 {
-	cell* nw = new cell;
-	nw = tip;
+	/*cell* nw = tip;
 
 	int pos = 0;
 
@@ -63,9 +62,9 @@ int tape::getP()
 		nw = nw->next;
 	}
 
-	nw = NULL;
 	delete nw;
-	return pos;
+	return pos;*/
+	return curr;
 }
 
 
@@ -92,6 +91,7 @@ char tape::read()
 
 void tape::write(char inD)
 {
+	cout << inD << endl;
 	curr->dta = inD;
 }
 
@@ -393,25 +393,27 @@ void tape::clear()
 	cnt = 0;
 }
 
-void tape::pList()
+void tape::pList(int x)
 {
 	isEmpty();
-
-	cell* tmp = new cell;
-	tmp = curr;
-
 	resetP();
 
 	while (curr->next != NULL)
 	{
-		curr = curr->next;
 		cout << curr->dta << ' ';
+		curr = curr->next;
+		
 	}
-
 	cout << endl;
-
-	curr = tmp;
-	delete tmp;
+	for (int j = 1; j < x; j++) {
+		cout << "  ";
+	}
+	cout << '^' << endl;
+	int i = 0;
+	while (i < x) {
+		itR();
+		i++;
+	}
 }
 
 #endif

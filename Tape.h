@@ -46,15 +46,13 @@ public:
 	void itR();
 	void itL();
 	bool isPset();
-	int getP();
+	cell* getP();
 	void setP(cell*);
 	char read();
 	void write(char);
 	int length();
 	bool isEmpty();
 	bool isFull();
-
-	void pList();
 
 	//insert
 
@@ -71,5 +69,6 @@ public:
 
 	void del();
 	void clear();
+	void pList(int);
 };
 #endif
