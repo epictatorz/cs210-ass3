@@ -22,7 +22,7 @@ int main() {
 		switch (choice) {
 		case '1': {
 			int StateRegister;
-			tape<char> T;
+			tape T;
 			ActionTable AT[AT_Size];
 			string Text = "problem.txt";	//sets file name
 			string Line;
@@ -44,21 +44,21 @@ int main() {
 			while (Symbol != '-') {			//this loop initilizes the Action Table
 				int i = 0;
 				getline(problem, Line);
-				//cout << Line << endl;
+				cout << Line << endl;
 				Symbol = Line[0];			//gets the first character in the list and sees if it is '-' to end the 
 				if (Symbol == '-') {		//initilizing of the Action Table
 					break;
 				}
 				AT[i].CurrentState = int(Line[0]) - 48;		//must subtract 48 to convert the ASCII code to integers
-				AT[i].Symbol = int(Line[2]);				//skips odds as they are spaces ' '
-				AT[i].NextState = Line[4] - 48;
+				AT[i].Symbol = Line[2];				//skips odds as they are spaces ' '
+				AT[i].NextState = int(Line[4]) - 48;
 				AT[i].NewSymbol = Line[6];
 				AT[i].Direction = Line[8];
-				//cout << AT[i].CurrentState << AT[i].Symbol << AT[i].NextState << AT[i].NewSymbol << AT[i].Direction << endl;
+				cout << AT[i].CurrentState << AT[i].Symbol << AT[i].NextState << AT[i].NewSymbol << AT[i].Direction << endl;
 				i++;
 			}
 			getline(problem, Line);
-			//cout << Line << endl;
+			cout << Line << endl;
 			/* 
 			int x = Line[0];
 			setp(x);

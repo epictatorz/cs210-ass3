@@ -2,39 +2,37 @@
 #include <cstdlib>
 #include <string>
 
-#ifndef Tape_h
-#define Tape_h
+#ifndef tape_h
+#define tape_h
 
 using namespace std;
 
-template <typename bn>
 struct cell
 {
-	cell<bn>* prev = new cell<bn>;
-	cell<bn>* next = new cell<bn>;
+	cell* prev;
+	cell* next;
 
-	bn* dta = new bn;
+	char dta;
 };
 
-template <typename bn>
 class tape
 {
-	cell<bn>* curr;
-	cell<bn>* tip;
-	cell<bn>* tail;
+	cell* curr;
+	cell* tip;
+	cell* tail;
 
-	int* cnt;
+	int cnt;
 	bool* itrt;
 
 	//insert
 
-	void iSortedR(bn);
-	void iSortedL(bn);
+	void iSortedR(char);
+	void iSortedL(char);
 
 	//find
 
-	bool findSortedR(bn);
-	bool findSortedL(bn);
+	bool findSortedR(char);
+	bool findSortedL(char);
 
 	//delete
 
@@ -49,22 +47,22 @@ public:
 	void itL();
 	bool isPset();
 	int getP();
-	void setP(bn);
-	bn read();
-	void write(bn);
+	void setP(cell*);
+	char read();
+	void write(char);
 	int length();
 	bool isEmpty();
 	bool isFull();
 
 	//insert
 
-	void iHead(bn);
-	void iTail(bn);
-	 // void iSorted(bn);
+	void iHead(char);
+	void iTail(char);
+	// void iSorted(bn);
 
 	//find
 
-	//bool find(bn);
+	bool find(char);
 	//bool findSorted(bn);
 
 	//delete
@@ -72,7 +70,4 @@ public:
 	void del();
 	void clear();
 };
-
 #endif
-
-#include "Tape.cpp"
