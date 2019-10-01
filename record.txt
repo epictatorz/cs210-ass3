@@ -1,0 +1,140 @@
+Script started on 2019-10-01 01:22:15-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="211" LINES="53"]
+]0;joey@joey-VivoBook-ASUSLaptop-X512DA-X512DA: ~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[01;32mjoey@joey-VivoBook-ASUSLaptop-X512DA-X512DA[00m:[01;34m~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[00m$ g[Kls
+ActionTable.cpp  ActionTable.h  main.cpp  partners.txt  problem.txt  README.md  record.txt  Tape1.cpp  Tape.cpp  Tape.h
+]0;joey@joey-VivoBook-ASUSLaptop-X512DA-X512DA: ~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[01;32mjoey@joey-VivoBook-ASUSLaptop-X512DA-X512DA[00m:[01;34m~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[00m$ g++ -c a[KAA[K`[KctionTable.cpp main.cpp Tape.cpp
+]0;joey@joey-VivoBook-ASUSLaptop-X512DA-X512DA: ~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[01;32mjoey@joey-VivoBook-ASUSLaptop-X512DA-X512DA[00m:[01;34m~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[00m$ g++ -c ActionTable.cpp main.cpp Tape.cpp[C[Kg++ -o main ActionTable.o main.o Tape.o
+]0;joey@joey-VivoBook-ASUSLaptop-X512DA-X512DA: ~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[01;32mjoey@joey-VivoBook-ASUSLaptop-X512DA-X512DA[00m:[01;34m~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[00m$ ./main
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+1
+
+B 0 0 0 0 B 
+          ^
+Value: B  StateRegister:0
+
+B 0 0 0 0 B 
+        ^
+Value: 0  StateRegister:1
+
+1
+B 0 0 0 1 B 
+        ^
+Value: 1  StateRegister:0
+
+B 0 0 0 1 B 
+          ^
+Value: B  StateRegister:0
+
+B 0 0 0 1 B 
+        ^
+Value: 1  StateRegister:1
+
+0
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+2
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+1
+
+B 0 0 0 0 B 
+          ^
+Value: B  StateRegister:0
+
+B 0 0 0 0 B 
+        ^
+Value: 0  StateRegister:1
+
+1
+B 0 0 0 1 B 
+        ^
+Value: 1  StateRegister:0
+
+B 0 0 0 1 B 
+          ^
+Value: B  StateRegister:0
+
+B 0 0 0 1 B 
+        ^
+Value: 1  StateRegister:1
+
+0
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+aqhqet
+Invalid choice.
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+Invalid choice.
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+Invalid choice.
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+Invalid choice.
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+Invalid choice.
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+Invalid choice.
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+1
+
+B 0 0 0 0 B 
+          ^
+Value: B  StateRegister:0
+
+B 0 0 0 0 B 
+        ^
+Value: 0  StateRegister:1
+
+1
+B 0 0 0 1 B 
+        ^
+Value: 1  StateRegister:0
+
+B 0 0 0 1 B 
+          ^
+Value: B  StateRegister:0
+
+B 0 0 0 1 B 
+        ^
+Value: 1  StateRegister:1
+
+0
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+2
+Please enter a choice.
+1: Count File
+2: Subtract File
+3: Exit
+3
+]0;joey@joey-VivoBook-ASUSLaptop-X512DA-X512DA: ~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[01;32mjoey@joey-VivoBook-ASUSLaptop-X512DA-X512DA[00m:[01;34m~/school/classes/cs210-2/assignments/assignment3/git/cs210-ass3[00m$ exit
+exit
+
+Script done on 2019-10-01 01:24:04-06:00 [COMMAND_EXIT_CODE="0"]
