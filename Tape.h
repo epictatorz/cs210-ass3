@@ -54,6 +54,8 @@ public:
 	bool isEmpty();
 	bool isFull();
 
+	void pList();
+
 	//insert
 
 	void iHead(char);

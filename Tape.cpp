@@ -391,4 +391,20 @@ void tape::clear()
 	cnt = 0;
 }
 
+void tape::pList()
+{
+	isEmpty();
+	resetP();
+
+	cout << curr->dta;
+
+	while (curr->next != NULL)
+	{
+		curr = curr->next;
+		cout << curr->dta << ' ';
+	}
+
+	cout << endl;
+}
+
 #endif
