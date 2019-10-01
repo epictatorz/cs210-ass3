@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <stdlib.h>
-#include "Actiontable.h"
+#include "ActionTable.h"
 #include "Tape.h"
 using namespace std;
 

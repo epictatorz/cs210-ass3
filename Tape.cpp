@@ -1,3 +1,6 @@
+#ifndef Tape_cpp
+#define Tape_cpp
+
 #include "Tape.h"
 
 
@@ -385,3 +388,5 @@ void tape::clear()
 	curr = NULL;
 	cnt = 0;
 }
+
+#endif
