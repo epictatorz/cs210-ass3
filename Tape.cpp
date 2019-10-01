@@ -52,7 +52,8 @@ bool tape::isPset()
 
 int tape::getP()
 {
-	cell* nw = tip;
+	cell* nw = new cell;
+	nw = tip;
 
 	int pos = 0;
 
@@ -62,6 +63,7 @@ int tape::getP()
 		nw = nw->next;
 	}
 
+	nw = NULL;
 	delete nw;
 	return pos;
 }
