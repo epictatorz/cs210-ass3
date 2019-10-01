@@ -2,8 +2,8 @@
 #include <cstdlib>
 #include <string>
 
-#ifndef tape_h
-#define tape_h
+#ifndef Tape_h
+#define Tape_h
 
 using namespace std;
 
@@ -74,3 +74,5 @@ public:
 };
 
 #endif
+
+#include "Tape.cpp"

@@ -1,4 +1,4 @@
-#include "tape.h"
+#include "Tape.h"
 
 template <typename bn>
 tape<bn>::tape()
