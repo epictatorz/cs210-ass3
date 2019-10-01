@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <stdlib.h>
-#include "ActionTable.h"
+#include "Actiontable.h"
 #include "Tape.h"
 using namespace std;
 
@@ -18,28 +18,35 @@ int main() {
 		cout << "2: Subtract File" << endl;
 		cout << "3: Exit" << endl;
 		cin >> choice;
-		system("cls");								//clears the screen
 		switch (choice) {
 		case '1': {
+			cout << "hi " << endl;
 			int StateRegister;
 			tape T;
 			ActionTable AT[AT_Size];
 			string Text = "problem.txt";	//sets file name
 			string Line;
 
+
 			ifstream problem;				//opens the file
 			problem.open(Text);
 
 			getline(problem, Line);
-			StateRegister = Line[0];		//initilizes the StateRegister
+			StateRegister = Line[0]- '0';		//initilizes the StateRegister
+			cout << StateRegister << endl;
 
 			getline(problem, Line);
+			cout << Line << endl;
 			int count = 2;
 			T.iHead(Line[0]);
+			cout << "working" << endl;
 			while (count <= Line.length()) {
 				T.iTail(Line[count]);
 				count += 2;
+				cout << T.read() << ' ' << endl;
 			}
+			cout << "working 1" << endl;
+
 			char Symbol = '0';
 			while (Symbol != '-') {			//this loop initilizes the Action Table
 				int i = 0;
