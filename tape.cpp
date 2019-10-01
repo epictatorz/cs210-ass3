@@ -1,5 +1,3 @@
-#ifndef tape_cpp
-#define tape_cpp
 #include "tape.h"
 
 template <typename bn>
@@ -181,7 +179,7 @@ void tape<bn>::iTail(bn inD)
 
     delete nw;
 }
-
+/*
 template <typename bn>
 void tape<bn>::iSorted(bn inD)
 {
@@ -194,7 +192,7 @@ void tape<bn>::iSorted(bn inD)
     else if (inD >= curr->dta)
         iSortedR(inD);
 
-    /*
+    
     while (curr->next != NULL && curr->dta < inD)
         {
             curr = curr->next;
@@ -210,7 +208,7 @@ void tape<bn>::iSorted(bn inD)
     curr->next = nw;
 
     delete nw;
-    */
+    
 }
 
 template <typename bn>
@@ -253,7 +251,7 @@ void tape<bn>::iSortedL(bn inD)
     delete nw;
 }
 
-
+*/
     //find
 
 
@@ -273,7 +271,7 @@ bool tape<bn>::find(bn inD)
     else
         return false;
 }
-
+/*
 template <typename bn>
 bool tape<bn>::findSorted(bn inD)
 {
@@ -314,7 +312,7 @@ bool tape<bn>::findSortedL(bn inD)
     else
         return false;
 }
-
+*/
 
     //delete
 
@@ -367,4 +365,4 @@ void tape<bn>::clear()
     cnt = 0;
 }
 
-#endif
+template class tape <char>;
