@@ -139,17 +139,24 @@ void tape::iHead(char inD)
 	cell* nw = new cell;
 
 	nw->dta = inD;
-	nw->next = tip;
 	nw->prev = NULL;
 
-	tip->prev = nw;
+	if (tip == NULL) {
+		nw->next = NULL;
+	}
+	else {
+		tip->prev = nw;
+		nw->next = tip;
+	}
 	tip = nw;
-
 	curr = tip;
+	cnt++;
+
+	/*curr = tip;
 
 	cnt++;
 
-	delete nw;
+	delete nw;*/
 }
 
 
@@ -159,7 +166,20 @@ void tape::iTail(char inD)
 	isEmpty();
 	isPset();
 
-	while (curr->next != NULL)
+	cell* nw = new cell;
+	nw->dta = inD;
+	nw->next = NULL;
+	tail = curr->prev;
+	while (curr != NULL) {
+		tail = curr;
+		curr = curr->next;
+	}
+	tail->next = nw;
+	nw->prev = tail;
+	curr = nw;
+	cnt++;
+
+	/*while (curr->next != NULL)
 	{
 		curr = curr->next;
 	}
@@ -179,7 +199,7 @@ void tape::iTail(char inD)
 
 	cnt++;
 
-	delete nw;
+	delete nw;*/
 }
 /*
 
