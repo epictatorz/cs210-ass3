@@ -114,6 +114,8 @@ bool tape::isEmpty()
 {
 	if (tip->next == NULL)
 		return true;
+	else
+		return false;
 }
 
 

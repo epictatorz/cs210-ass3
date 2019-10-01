@@ -71,3 +71,5 @@ public:
 	void clear();
 };
 #endif
+
+#include "Tape.cpp"
