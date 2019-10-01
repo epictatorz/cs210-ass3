@@ -394,6 +394,10 @@ void tape::clear()
 void tape::pList()
 {
 	isEmpty();
+
+	cell* tmp = new cell;
+	tmp = curr;
+
 	resetP();
 
 	cout << curr->dta;
@@ -405,6 +409,9 @@ void tape::pList()
 	}
 
 	cout << endl;
+
+	curr = tmp;
+	delete tmp;
 }
 
 #endif
