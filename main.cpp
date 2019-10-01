@@ -7,7 +7,7 @@
 using namespace std;
 
 const int AT_Size = 25;
-void turing(int, ActionTable);
+void turing(int, ActionTable, tape);
 
 int main() {
 	bool exit = false;
@@ -20,7 +20,6 @@ int main() {
 		cin >> choice;
 		switch (choice) {
 		case '1': {
-			cout << "hi " << endl;
 			int StateRegister;
 			tape T;
 			ActionTable AT[AT_Size];
@@ -33,19 +32,15 @@ int main() {
 
 			getline(problem, Line);
 			StateRegister = Line[0]- '0';		//initilizes the StateRegister
-			cout << StateRegister << endl;
 
 			getline(problem, Line);
-			cout << Line << endl;
-			int count = 2;
+			unsigned int count = 2;
+
 			T.iHead(Line[0]);
-			cout << "working" << endl;
-			while (count <= Line.length()) {
+			while (count <= Line.length() + 1) {
 				T.iTail(Line[count]);
 				count += 2;
-				cout << T.read() << ' ' << endl;
 			}
-			cout << "working 1" << endl;
 
 			char Symbol = '0';
 			while (Symbol != '-') {			//this loop initilizes the Action Table
@@ -66,16 +61,11 @@ int main() {
 			}
 			getline(problem, Line);
 			cout << Line << endl;
-			/* 
-			int x = Line[0];
-			setp(x);
-			*/
-			for (int i = 0; i <= Line[0]; i++){
-				//iterate prt to right
-				//T.iRight();
+			for (int i = 0; i <= (Line[0] - '0') - 1; i++){
+				T.itR();
 			}
-			/*code to initilize ptr position*/
 			problem.close();
+			//turing(StateRegister, AT[AT_Size], T);
 			break;
 		}
 		case '2':
@@ -90,8 +80,10 @@ int main() {
 	}
 	return 0;
 }
-void turing(int SR, ActionTable AT) {
-	
+void turing(int SR, ActionTable AT, tape T) {
+	/*for (int i = 0; i <= AT_Size; i++) {
+		switch()
+	}*/
 }
 /*
 void subtract() {
